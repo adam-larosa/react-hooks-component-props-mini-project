@@ -19,11 +19,13 @@
     <small>{date} {condition ? oneFunction() : otherFunction()}</small>
 */
 export default function Emojis({ m }) {
+    
     const belowThirty = m < 30
+
+    const amount = belowThirty ? 5 : 10
+    const totalEmojis = Math.ceil(m / amount)
     
     const emoji = belowThirty ? "☕️" : "🍱"
-    const iSize = belowThirty ? 5 : 10
-    const totalEmojis = Math.ceil(m / iSize)
-
-    return <>{ emoji.repeat(totalEmojis) }</>
+    
+    return <>{ `${emoji.repeat(totalEmojis)} ${m} min read` }</>
 }
