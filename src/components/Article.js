@@ -1,6 +1,5 @@
 import Emojis from './Emojis'
-export default function Article({ title, date = "January 1, 1970", preview, 
-    minutes}) {
+function Article({ title, date = "January 1, 1970", preview, minutes}) {
     //make emoji array (empty)
     //use conditional logic to set emoji type
     //push appropiate number of emojis into array
@@ -17,8 +16,6 @@ export default function Article({ title, date = "January 1, 1970", preview,
     //ternery in JSX?
     // <small>{date} {condition ? oneFunction() : otherFunction()}</small>
 
-
-
     return (
         <article>
             <h3>{title}</h3>
@@ -29,3 +26,5 @@ export default function Article({ title, date = "January 1, 1970", preview,
         </article>
     )
 }
+
+export default Article
