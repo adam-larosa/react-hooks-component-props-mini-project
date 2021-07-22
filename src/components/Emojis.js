@@ -20,6 +20,7 @@
 */
 export default function Emojis({ m }) {
     const belowThirty = m < 30
+    
     const emoji = belowThirty ? "☕️" : "🍱"
     const iSize = belowThirty ? 5 : 10
     const totalEmojis = Math.ceil(m / iSize)
