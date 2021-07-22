@@ -1,5 +1,5 @@
 import Emojis from './Emojis'
-function Article({ title, date = "January 1, 1970", preview, minutes}) {
+function Article({ title, date = "January 1, 1970", preview, minutes:mins }) {
     //make emoji array (empty)
     //use conditional logic to set emoji type
     //push appropiate number of emojis into array
@@ -19,9 +19,7 @@ function Article({ title, date = "January 1, 1970", preview, minutes}) {
     return (
         <article>
             <h3>{title}</h3>
-            <small>
-                {date} {minutes} min read <Emojis m={minutes} />
-            </small>
+            <small>{date} {mins} min read <Emojis m={mins} /></small>
             <p>{preview}</p>
         </article>
     )
