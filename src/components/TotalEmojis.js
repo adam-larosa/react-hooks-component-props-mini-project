@@ -1,15 +1,12 @@
-export default function TotalEmojis({ minutes }) {
-    const emoji = minutes < 30 ? "☕️" : "🍱"
+export default function TotalEmojis({ m }) {
+    const belowThirty = m < 30
+    const emoji = belowThirty ? "☕️" : "🍱"
+    const iSize = belowThirty ? 5 : 10
     let totalEmojis = ""
 
-    if (minutes < 30) {
-        for(let i = 0; i < minutes; i += 5) {
-            totalEmojis += emoji
-        }
-    } else {
-        for(let i = 0; i < minutes; i += 10) {
-            totalEmojis += emoji
-        }
+    for(let i = 0; i < m; i += iSize) {
+        totalEmojis += emoji
     }
+
     return <>{totalEmojis}</>
 }
