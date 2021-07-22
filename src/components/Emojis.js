@@ -22,11 +22,7 @@ export default function Emojis({ m }) {
     const belowThirty = m < 30
     const emoji = belowThirty ? "☕️" : "🍱"
     const iSize = belowThirty ? 5 : 10
-    let totalEmojis = ""
+    const totalEmojis = Math.ceil(m / iSize)
 
-    for(let i = 0; i < m; i += iSize) {
-        totalEmojis += emoji
-    }
-
-    return <>{totalEmojis}</>
+    return <>{ emoji.repeat(totalEmojis) }</>
 }
