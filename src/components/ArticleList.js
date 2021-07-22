@@ -1,11 +1,11 @@
 import Article from './Article'
 
-export default function ArticleList({ posts }) {
-    return (
-        <main>
-            {posts.map( post => <Article key={post.id} title={post.title} 
-                minutes={post.minutes} date={post.date} 
-                preview={post.preview} /> )}
-        </main>
-    )
+const renderArticle = post => {
+    const {id, title, minutes, date, preview} = post
+    const articleProps = {key: id, title, minutes, date, preview}
+    return <Article {...articleProps} />
 }
+
+const ArticleList = ({ posts }) => <main>{posts.map(renderArticle)}</main>
+
+export default ArticleList
