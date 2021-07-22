@@ -6,6 +6,6 @@ const renderArticle = post => {
     return <Article {...articleProps} />
 }
 
-const ArticleList = ({ posts }) => <main>{posts.map(renderArticle)}</main>
+const ArticleList = ({ posts }) => <main>{ posts.map(renderArticle) }</main>
 
 export default ArticleList
