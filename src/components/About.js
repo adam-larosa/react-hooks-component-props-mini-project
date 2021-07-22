@@ -1,4 +1,6 @@
-function About({ image = "https://via.placeholder.com/215", about }) {
+const defaultUrl = "https://via.placeholder.com/215"
+
+function About({ image = defaultUrl, about }) {
     return (
         <aside>
             <img src={image} alt="blog logo" />
