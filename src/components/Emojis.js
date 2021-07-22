@@ -1,4 +1,4 @@
-export default function TotalEmojis({ m }) {
+export default function Emojis({ m }) {
     const belowThirty = m < 30
     const emoji = belowThirty ? "☕️" : "🍱"
     const iSize = belowThirty ? 5 : 10

@@ -1,4 +1,4 @@
-import TotalEmojis from './TotalEmojis'
+import Emojis from './Emojis'
 export default function Article({ title, date = "January 1, 1970", preview, 
     minutes}) {
     //make emoji array (empty)
@@ -23,7 +23,7 @@ export default function Article({ title, date = "January 1, 1970", preview,
         <article>
             <h3>{title}</h3>
             <small>
-                {date} {minutes} min read <TotalEmojis m={minutes} />
+                {date} {minutes} min read <Emojis m={minutes} />
             </small>
             <p>{preview}</p>
         </article>
